@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>定位</title>
+  <style>
+    .relative1,.relative2{
+      width: 100px;
+      height: 100px;
+    }
+    .relative1{
+      border: 1px solid orange;
+      position: relative;
+      left:30px;
+      top: 10px;
+    }
+    .relative2{
+      border:1px solid skyblue;
+    }
+    #father{
+      width: 800px;
+      height: 500px;
+      border:1px solid green;
+      /*position: relative;*/
+    }
+    #father>div{
+      width: 100px;
+      height: 100px;
+    }
+    .son1{
+      background-color: purple;
+      position: absolute;
+    }
+    .son2{
+      background-color: cyan;
+       position: absolute;
+       right: 0;
+       top:0;
+    }
+   /* .clear{
+      clear: both;
+    }*/
+    .son3{
+      background-color: red;
+       position: absolute;
+       right: 0;
+       bottom:0;
+    }
+    .son4{
+      background-color: yellow;
+       position: absolute;
+       left:0;
+       bottom:0;
+    }
+    .fixed{
+      width: 300px;
+      height: 50px;
+      background-color: red;
+      position: fixed;
+      left:0;
+      top:800px;
+    }
+  </style>
+</head>
+<body>
+<!-- 静态定位 -->
+      <div>我是块级元素</div>
+      <p>换行了吗？</p>
+      <span>A组最棒！！！</span><i>倾斜</i>
+<!-- 相对定位 -->
+      <div class="relative1"></div>
+      <div class="relative2"></div>
+
+<!-- 绝对定位 -->
+      <div id="father">
+        <div class="son1"></div>
+        <div class="son2"></div>
+        <!-- <div class="clear"></div> -->
+        <div class="son3"></div>
+        <div class="son4"></div>
+      </div>
+  <!-- 固定定位 -->
+  <div class="clear"></div>
+  <div style="height:1000px;"></div>
+  <div class="fixed"></div>
+</body>
+</html>
